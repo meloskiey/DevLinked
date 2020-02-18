@@ -1,3 +1,4 @@
 {
-    "mongoURI": "mongodb+srv://meloskiey:melmak95@finalproject-f7pit.mongodb.net/test?retryWrites=true&w=majority"
+    "mongoURI": "mongodb+srv://meloskiey:melmak95@finalproject-f7pit.mongodb.net/test?retryWrites=true&w=majority",
+    "jwtSecret": "mysecrettoken"
 }
