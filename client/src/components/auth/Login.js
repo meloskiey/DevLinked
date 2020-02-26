@@ -2,7 +2,7 @@ import React, { Fragment, useState } from 'react';
 import { Link, Redirect } from 'react-router-dom';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
-import { login } from '../action/auth';
+import { login } from '../../action/auth';
 
 
 export const Login = ({ login, isAuthenticated }) => {
@@ -21,7 +21,7 @@ export const Login = ({ login, isAuthenticated }) => {
     };
 
     if (isAuthenticated) {
-      return <Redirect to='/somewhere' />;
+      return <Redirect to='/dashboard' />;
     }
 
     return (

@@ -1,7 +1,12 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link, Redirect } from 'react-router-dom';
+import { connect } from 'react-redux';
+import PropTypes from 'prop-types';
 
-export const Main = () => {
+export const Main = ({ isAuthenticated }) => {
+  if (isAuthenticated) {
+    return <Redirect to='/dashboard' />;
+  }
     return (
         <section className="main">
       <div className="dark-overlay">
@@ -11,7 +16,7 @@ export const Main = () => {
             A Community to Network Developers with other Developers and Aspiring Developers 
           </p>
           <div className="buttons">
-            <Link to='' className="btn btn-primary">Developers</Link>
+            <Link to='/profiles' className="btn btn-primary">Developers</Link>
           </div>
         </div>
       </div>

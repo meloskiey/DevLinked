@@ -1,9 +1,9 @@
 import React, { Fragment, useState } from 'react';
 import { Link, Redirect } from 'react-router-dom';
 import { connect } from 'react-redux';
-import { setAlert } from '../action/alert';
-import { register } from '../action/auth';
-import PropTypes from 'prop-types'
+import { setAlert } from '../../action/alert';
+import { register } from '../../action/auth';
+import PropTypes from 'prop-types';
 
 
 export const Register = ({ setAlert, register, isAuthenticated }) => {
@@ -21,7 +21,7 @@ export const Register = ({ setAlert, register, isAuthenticated }) => {
     const onSubmit = e => {
         e.preventDefault();
         if (password !== cfmpassword) {
-          setAlert('Passwords do not match', 'danger');
+          setAlert('Passwords do not match', 'danger', 3000);
         } else {
             register({ name, email, password });
         }
