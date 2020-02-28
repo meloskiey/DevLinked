@@ -342,6 +342,8 @@ router.get('/github/:username', (req, res) => {
             ),
             method: 'GET',
             headers: {
+                 'user-agent': 'node.js',
+              Authorization: `token ${config.get('githubToken')}`,
               'user-agent': 'node.js'
             }
           };
